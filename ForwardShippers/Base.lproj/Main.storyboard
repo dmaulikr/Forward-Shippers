@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ForwardShippers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Package Weight?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhD-E1-N6Y" userLabel="WeightQuesLbl">
+                                <rect key="frame" x="189" y="35" width="223" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuI-V8-Cv4" userLabel="SubmitBtn">
+                                <rect key="frame" x="237" y="116" width="127" height="30"/>
+                                <state key="normal" title="Give Me My Quote"/>
+                                <connections>
+                                    <action selector="SubmitBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pFk-MJ-5kF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wsh-JJ-9mw" userLabel="WeightInput">
+                                <rect key="frame" x="225" y="71" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7NX-Xy-6Ae"/>
+                                    <constraint firstAttribute="width" constant="150" id="upO-wW-C0g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kz-ja-ojL" userLabel="QuoteLbl">
+                                <rect key="frame" x="189" y="201" width="228" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="3dO-3e-9YO"/>
+                                    <constraint firstAttribute="height" constant="225" id="Eob-Ce-LwU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Kz-ja-ojL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="3" id="1yx-Ml-RG8"/>
+                            <constraint firstItem="LhD-E1-N6Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="H52-gE-MId"/>
+                            <constraint firstItem="Wsh-JJ-9mw" firstAttribute="top" secondItem="LhD-E1-N6Y" secondAttribute="bottom" constant="15" id="W4y-IQ-MTR"/>
+                            <constraint firstItem="KuI-V8-Cv4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XGD-pF-r9p"/>
+                            <constraint firstItem="Wsh-JJ-9mw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="awU-nv-UWf"/>
+                            <constraint firstItem="6Kz-ja-ojL" firstAttribute="top" secondItem="KuI-V8-Cv4" secondAttribute="bottom" constant="55" id="nIb-pk-my3"/>
+                            <constraint firstItem="LhD-E1-N6Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUw-bi-S9D"/>
+                            <constraint firstItem="KuI-V8-Cv4" firstAttribute="top" secondItem="Wsh-JJ-9mw" secondAttribute="bottom" constant="15" id="qed-5o-1Gf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="QuoteLbl" destination="6Kz-ja-ojL" id="7dR-dP-fhH"/>
+                        <outlet property="SubmitBtn" destination="KuI-V8-Cv4" id="wOa-Nt-ong"/>
+                        <outlet property="WeightInput" destination="Wsh-JJ-9mw" id="Rdd-Lh-jFK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="429"/>
+        </scene>
+    </scenes>
+</document>
