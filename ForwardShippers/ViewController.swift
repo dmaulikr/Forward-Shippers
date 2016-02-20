@@ -20,21 +20,43 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //parameters
+    //Outlets
     @IBOutlet weak var WeightInput: UITextField!
     @IBOutlet weak var SubmitBtn: UIButton!
     @IBOutlet weak var QuoteLbl: UILabel!
     
+    //Properties
+   // var weight: Double = 0.0
+ //   var aramexQuote: Double = 0.0
+    
     //functions
     @IBAction func SubmitBtnAction(sender: AnyObject) {
+        //check for weight value
+        if WeightInput.text != nil && WeightInput.text != "" {
+            let weight = Double(WeightInput.text!)!
+            
+          let aramexQuote = aramexCalculate(weight)
+            
+            printQuote(weight,aramexQuote:aramexQuote)
+        }
+       //No weight value
+        else {
+            QuoteLbl.hidden = false
+            QuoteLbl.text = "Please insert a weight."
+        }
+    }
+    
+    //calculate aramex
+    func aramexCalculate(weight: Double)-> Double {
+        let aramexQuote = weight + 1.0
+        return aramexQuote
+    }
+    
+    //print the quotes
+    func printQuote (weight: Double, aramexQuote: Double) {
+ 
         QuoteLbl.hidden = false
-        printQuote()
+        QuoteLbl.text = "To ship an item weighing \(weight) it will cost: \n something $dollars \(aramexQuote)"
     }
-    
-    func printQuote () {
-        QuoteLbl.text = "To ship an item weighing" 
-    }
-    
-
 }
 

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -39,10 +40,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kz-ja-ojL" userLabel="QuoteLbl">
-                                <rect key="frame" x="189" y="201" width="228" height="225"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kz-ja-ojL" userLabel="QuoteLbl">
+                                <rect key="frame" x="28" y="165" width="544" height="225"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="228" id="3dO-3e-9YO"/>
                                     <constraint firstAttribute="height" constant="225" id="Eob-Ce-LwU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -52,12 +52,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Kz-ja-ojL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="3" id="1yx-Ml-RG8"/>
+                            <constraint firstItem="6Kz-ja-ojL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="165" id="4Bs-xr-84w"/>
+                            <constraint firstItem="6Kz-ja-ojL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="61o-R6-rdG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Kz-ja-ojL" secondAttribute="trailing" constant="8" id="Gal-Am-GZN"/>
                             <constraint firstItem="LhD-E1-N6Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="H52-gE-MId"/>
                             <constraint firstItem="Wsh-JJ-9mw" firstAttribute="top" secondItem="LhD-E1-N6Y" secondAttribute="bottom" constant="15" id="W4y-IQ-MTR"/>
                             <constraint firstItem="KuI-V8-Cv4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XGD-pF-r9p"/>
                             <constraint firstItem="Wsh-JJ-9mw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="awU-nv-UWf"/>
-                            <constraint firstItem="6Kz-ja-ojL" firstAttribute="top" secondItem="KuI-V8-Cv4" secondAttribute="bottom" constant="55" id="nIb-pk-my3"/>
                             <constraint firstItem="LhD-E1-N6Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUw-bi-S9D"/>
                             <constraint firstItem="KuI-V8-Cv4" firstAttribute="top" secondItem="Wsh-JJ-9mw" secondAttribute="bottom" constant="15" id="qed-5o-1Gf"/>
                         </constraints>
